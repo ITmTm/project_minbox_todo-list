@@ -1,0 +1,33 @@
+.todo-input {
+  position: relative;
+  width: 100%;
+  input {
+    width: 100%;
+    padding: 10px 10px 10px 30px;
+    font-size: 1.2rem;
+    color: #666666;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+    outline: 1px solid transparent;
+    &::placeholder {
+      color: rgba(102, 102, 102, 0.3);
+    }
+  }
+
+  .dropdown-btn {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+    color: rgba(175, 47, 47, 0.15);
+    transition: .3s ease-in-out;
+    &:hover {
+      color: rgba(0, 0, 0, 0.4);
+      transition: .3s ease-in;
+    }
+  }
+}
