@@ -1,0 +1,46 @@
+.todo-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  background: #fff;
+  border-radius: 4px;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
+
+  li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+    padding: 10px;
+    color: #666666;
+
+    label {
+      display: flex;
+      align-items: center;
+    }
+
+    input[type='checkbox'] {
+      appearance: none;
+      width: 25px;
+      height: 25px;
+      border: 1px solid #ccc;
+      border-radius: 50%;
+      margin-right: 10px;
+      cursor: pointer;
+    }
+
+    input[type='checkbox']:checked {
+      background: #007bff;
+      border: none;
+    }
+  }
+
+  .delete-btn {
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    color: #e74c3c;
+    cursor: pointer;
+  }
+}
+
