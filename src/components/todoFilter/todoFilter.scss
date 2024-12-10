@@ -1,0 +1,40 @@
+.todo-filter {
+  display: flex;
+  background: white;
+  justify-content: space-between;
+  align-items: center;
+  color: #888;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  font-size: 0.9rem;
+  padding: 10px;
+
+  button {
+    padding: 5px 10px;
+    font-size: 0.85rem;
+    border: 1px solid transparent;
+    background: transparent;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  button.active {
+    background: transparent;
+    border: 1px solid #888;
+    transition: .3s ease-in;
+  }
+
+  .filter-buttons {
+    display: flex;
+    column-gap: 1rem;
+    button {
+      color: #888;
+    }
+  }
+}
+
+.clear-btn {
+  color: #888;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
