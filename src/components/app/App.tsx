@@ -31,17 +31,22 @@ const App: React.FC = () => {
 
 	const deleteTodo = (id: number) => {
 		setTodos(todos.filter(todo => todo.id !== id));
-	}
+	};
 
 	const clearCompleted = () => {
 		setTodos(todos.filter(todo => !todo.completed));
 	};
 
-	const filteredTodos = todos.filter(todo => {
-		if (filter === 'active') return !todo.completed;
-		if (filter === 'completed') return todo.completed;
-		return true;
-	})
+	const filteredTodos = (() => {
+		const filters = {
+			all: () => true,
+			active: (todo: Todo) => !todo.completed,
+			completed: (todo: Todo) => todo.completed,
+		};
+		return todos.filter(filters[filter]);
+	})();
+
+
 
 	return (
 		<div className='app'>
@@ -64,4 +69,4 @@ const App: React.FC = () => {
 	);
 };
 
-export default App
+export default App;
