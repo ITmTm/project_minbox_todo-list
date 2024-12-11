@@ -13,6 +13,8 @@
     border-bottom: 1px solid #ddd;
     padding: 10px;
     color: #666666;
+    font-size: 1.2rem;
+    font-weight: 400;
 
     label {
       display: flex;
@@ -21,26 +23,32 @@
 
     input[type='checkbox'] {
       appearance: none;
-      width: 25px;
-      height: 25px;
-      border: 1px solid #ccc;
+      width: 30px;
+      height: 30px;
+      border: 1px solid rgba(175, 47, 47, 0.3);;
       border-radius: 50%;
-      margin-right: 10px;
+      margin-right: 15px;
       cursor: pointer;
+      position: relative;
+
+      &:checked {
+        background: none;
+        border-color: rgba(175, 47, 47, 0.3);
+
+        &:after {
+          content: '\2713';
+          color: #666666;
+          font-weight: 600;
+          font-size: 16px;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          transition: 3s ease-in;
+        }
+      }
     }
 
-    input[type='checkbox']:checked {
-      background: #007bff;
-      border: none;
-    }
-  }
-
-  .delete-btn {
-    background: none;
-    border: none;
-    font-size: 1.2rem;
-    color: #e74c3c;
-    cursor: pointer;
   }
 }
 
