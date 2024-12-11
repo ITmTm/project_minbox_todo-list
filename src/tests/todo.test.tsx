@@ -1,5 +1,5 @@
 import { render, screen, fireEvent } from '@testing-library/react';
-import '@testing-library/jest-dom';
+import { expect, describe, test, } from 'vitest';
 import App from '../components/app/App.tsx';
 
 describe('Todo App', () => {
