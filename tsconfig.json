@@ -5,11 +5,23 @@
     { "path": "./tsconfig.node.json" }
   ],
   "compilerOptions": {
+    "target": "ESNext",
+    "module": "ESNext",
+    "moduleResolution": "Node",
+    "jsx": "react-jsx",
+    "strict": true,
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"]
+    },
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "resolveJsonModule": true,
     "types": [
       "vite/client",
       "@testing-library/jest-dom"
     ]
   },
-  "include": ["src/**/*", "vitest.setup.ts"],
+  "include": ["src/**/*", "vitest.setup.ts", "vite.config.ts"],
   "exclude": ["node_modules", "dist", "e2e"]
 }
