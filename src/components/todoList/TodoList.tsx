@@ -1,5 +1,6 @@
 import React from "react";
 import { Todo } from '../app/App.tsx';
+import Button from "../ui/Button.tsx";
 
 import './todoList.scss';
 
@@ -23,7 +24,7 @@ const TodoList: React.FC<TodoListProps> = ({ todos, toggleTodo, deleteTodo }) =>
 						<span>{todo.text}</span>
 					</label>
 					{!todo.completed && (
-						<button onClick={() => deleteTodo(todo.id)} className='delete-btn'>✕</button>
+						<Button onClick={() => deleteTodo(todo.id)} className='delete-btn'>✕</Button>
 					)}
 				</li>
 			))}
