@@ -5,6 +5,7 @@
     { "path": "./tsconfig.node.json" }
   ],
   "compilerOptions": {
+    "composite": true,
     "target": "ESNext",
     "module": "ESNext",
     "moduleResolution": "Node",
