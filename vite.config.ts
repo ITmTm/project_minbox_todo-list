@@ -3,7 +3,11 @@ import react from '@vitejs/plugin-react'
 import { configDefaults } from "vitest/config";
 
 export default defineConfig({
-  plugins: [react()],
+  plugins: [
+    react(),
+    createHtmlPlugin()
+  ],
+
   test: {
     setupFiles: './vitest.setup.ts',
     environment: 'jsdom',
